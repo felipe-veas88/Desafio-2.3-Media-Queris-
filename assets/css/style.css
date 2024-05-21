@@ -1,0 +1,239 @@
+/* Estilos para el contenedor principal */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* Asegura que el cuerpo del documento sea una columna */
+}
+
+/* Estilo del encabezado del menú */
+h3 {
+  text-align: center;
+}
+
+/* Contenedor del menú */
+.menu {
+  padding: 10px 20px;
+}
+
+/* Botones del menú */
+.botonmenu {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/* Transición al hacer hover en el menú */
+.menu:hover {
+  transition: opacity 0.2s;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  width: 100%;
+  height: 110%;
+}
+
+/* Navbar */
+.navbar {
+  width: 180px;
+  background-color: #343a40;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asegura que el contenido se distribuya entre el inicio y el final */
+}
+
+/* Footer */
+.footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 10px;
+  background-color: black;
+}
+
+.footer .logos img {
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.footer .logos img:hover {
+  opacity: 0.7; /* Efecto hover */
+}
+
+/* Galería */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  position: relative; /* Para asegurarnos de que el paginador esté bien posicionado */
+}
+
+/* Dropdown */
+.dropdown {
+  width: 100%;
+  background-color: #343a40;
+  padding: 10px 10px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.dropdown select {
+  width: 100%;
+  padding: 10px;
+  background-color: #343a40;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Estilos de la tarjeta */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background-color: #343a40;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #495057;
+}
+
+/* Estilos del paginador */
+.paginador {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center;
+  padding: 20px 0;
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+.page-link {
+  margin: 0 10px;
+  padding: 10px 15px;
+  background-color: #343a40; /* Mismo color que el navbar */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.page-link:hover {
+  background-color: #495057;
+}
+
+/* Estilo de la tarjeta especial */
+.card.especial {
+  width: 535%;
+  height: 90%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Estilo del cuerpo de la tarjeta especial */
+.card.especial .card-body {
+  padding: 2px;
+}
+
+/* Estilo del título de la tarjeta especial */
+.card.especial .card-title {
+  color: white; /* Color del texto blanco */
+  font-size: 1.5rem; /* Tamaño de fuente más grande */
+}
+
+/* Estilo del texto de la tarjeta especial */
+.card.especial .card-text {
+  color: white; /* Color del texto blanco */
+}
+
+/* Estilo del botón de la tarjeta especial */
+.card.especial .btn {
+  background-color: white; /* Cambiar el color de fondo */
+  color: #343a40; /* Cambiar el color del texto */
+  border-color: white; /* Cambiar el color del borde */
+}
+
+@media only screen and (max-width: 600px) {
+  /* Agrega aquí tus estilos para dispositivos móviles */
+  /* Por ejemplo, ajusta el tamaño de fuente, el espaciado, la disposición de elementos, etc. */
+}
+
+@media only screen and (max-width: 600px) {
+  /* Navbar en la parte superior */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Asegura que el navbar esté por encima de otros elementos */
+  }
+
+  /* Galería */
+  .galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  /* Estilo de la tarjeta */
+  .card {
+    width: 90%; /* Ajusta el ancho de la tarjeta para ocupar casi todo el ancho de la pantalla */
+    margin-bottom: 20px; /* Espaciado entre tarjetas */
+  }
+
+  /* Estilo del paginador */
+  .paginador {
+    display: none; /* Oculta el paginador en dispositivos móviles */
+  }
+
+  /* Footer */
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
